@@ -4,11 +4,10 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-/*
-window.onload = generarFraseCompleta = () => {
-  return randomWho + randomAction + randomWhat + randomWhen;
+window.onload = () => {
+  document.querySelector("#excuse").innerHTML = generarExcusa();
 };
-*/
+
 const who = ["The dog", "My grandma", "His turtle", "My bird"];
 const action = ["ate", "peed", "crushed", "broke"];
 const what = ["my homework", "the keys", "the car"];
@@ -20,27 +19,22 @@ const when = [
   "while I was praying"
 ];
 
-generarExcusaWho = () => {
-  let randomIndex = Math.floor(Math.random() * who.length);
-  const randomWho = who[randomIndex];
+let generarExcusa = () => {
+  let randomIndexWho = Math.floor(Math.random() * who.length);
+  const randomWho = who[randomIndexWho];
   console.log(randomWho);
-};
-generarExcusaAction = () => {
-  let randomIndex = Math.floor(Math.random() * action.length);
-  const randomAction = action[randomIndex];
+
+  let randomIndexAct = Math.floor(Math.random() * action.length);
+  const randomAction = action[randomIndexAct];
   console.log(randomAction);
-};
-generarExcusaWhat = () => {
-  let randomIndex = Math.floor(Math.random() * what.length);
-  const randomWhat = what[randomIndex];
+
+  let randomIndexWhat = Math.floor(Math.random() * what.length);
+  const randomWhat = what[randomIndexWhat];
   console.log(randomWhat);
-};
-generarExcusaWhen = () => {
-  let randomIndex = Math.floor(Math.random() * when.length);
-  const randomWhen = when[randomIndex];
+
+  let randomIndexWhen = Math.floor(Math.random() * when.length);
+  const randomWhen = when[randomIndexWhen];
   console.log(randomWhen);
+
+  return randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen;
 };
-generarFraseCompleta = () => {
-  return randomWho + randomAction + randomWhat + randomWhen;
-};
-generar;
