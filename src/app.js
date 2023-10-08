@@ -22,19 +22,15 @@ const when = [
 let generarExcusa = () => {
   let randomIndexWho = Math.floor(Math.random() * who.length);
   const randomWho = who[randomIndexWho];
-  console.log(randomWho);
-
+  
   let randomIndexAct = Math.floor(Math.random() * action.length);
   const randomAction = action[randomIndexAct];
-  console.log(randomAction);
-
+  
   let randomIndexWhat = Math.floor(Math.random() * what.length);
   const randomWhat = what[randomIndexWhat];
-  console.log(randomWhat);
-
+ 
   let randomIndexWhen = Math.floor(Math.random() * when.length);
   const randomWhen = when[randomIndexWhen];
-  console.log(randomWhen);
 
   return randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen;
 };
